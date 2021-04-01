@@ -62,6 +62,7 @@ body {
   padding: 1.5rem;
   background-color: rgba(32, 33, 36, 255);
   color: #e8eaed;
+  cursor: pointer;
 }
 
 .operator {

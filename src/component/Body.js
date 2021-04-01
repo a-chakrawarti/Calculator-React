@@ -9,6 +9,7 @@ const Body = () => {
   const [result, setResult] = useState("");
   const [evaluate, setEvaluate] = useState("");
   const [visibility, setVisibility] = useState(false);
+  const [isOperator, setIsOperator] = useState(false);
 
   const handleNumber = (value) => {
     setInput((prevState) => prevState + value);
@@ -55,6 +56,10 @@ const Body = () => {
       case "÷":
         setInput((prevState) => prevState + value);
         setEvaluate((prevState) => prevState + "/");
+        break;
+      case "-":
+        setInput((prevState) => prevState + value);
+        setEvaluate((prevState) => prevState + "-");
         break;
       default:
         console.log("No cases matches!");
