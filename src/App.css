@@ -1,38 +1,87 @@
-.App {
+/* @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"); */
+@font-face {
+  font-family: "GoogleFont";
+  src: local("GoogleFont"),
+    url(./assets/fonts/GoogleFont.ttf) format("truetype");
+}
+
+* {
+  font-family: "GoogleFont";
+}
+
+html,
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: aquamarine;
+}
+
+.grid-container {
+  height: 100vh;
+  min-width: 600px;
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0px;
+}
+
+.result {
+  background-color: rgba(45, 48, 51, 255);
+  grid-column: 1/ -1;
+  text-align: right;
+  padding-right: 0.85rem;
+  color: #9aa0a6;
+  padding-top: 0.25rem;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.input {
+  grid-column: 1/ -1;
+}
+
+.input input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 48, 51, 255);
+  outline: none;
+  border: none;
+  font-size: 3rem;
+  text-align: right;
+  padding-right: 0.85rem;
+  color: rgba(232, 234, 237, 255);
+  letter-spacing: 2px;
+}
+
+.button {
   text-align: center;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  background-color: rgba(32, 33, 36, 255);
+  color: #e8eaed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.operator {
+  color: rgba(138, 180, 248, 255);
+  background-color: rgba(32, 33, 36, 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.span-two {
+  grid-column: span 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.border-right {
+  border-right: 1px solid gray;
 }
 
-.App-link {
-  color: #61dafb;
+.border-top {
+  border-top: 1px solid gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blue-bg {
+  background-color: rgba(23, 78, 166, 255);
+  color: #e8eaed;
 }
